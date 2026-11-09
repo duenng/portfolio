@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ee">
+  <meta name="description" content="Timothy Ng is a Computer Science graduate building trading and portfolio software. Explore his Python, broker API, and machine learning projects.">
+  <title>Timothy Ng — Software for the markets</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="Timothy Ng home">tn<span>↗</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#work">Selected work</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="header-resume" href="assets/Timothy-Ng-Resume.pdf" download>Résumé <span aria-hidden="true">↓</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot"></span> TIMOTHY NG <span class="eyebrow-divider">/</span> HONG KONG</div>
+        <h1 id="hero-title">Building software<br>for the <span class="serif-word">markets.</span></h1>
+        <p class="hero-description">Computer science graduate. Developer at heart.<br>I turn trading ideas into software you can run,<br class="desktop-break"> inspect, and test.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#work">Explore my work <span aria-hidden="true">↘</span></a><a class="text-link" href="https://github.com/duenng" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+        <p class="availability"><span class="status-dot"></span> Seeking graduate quant developer opportunities</p>
+      </div>
+      <div class="system-visual" aria-label="Interactive conceptual diagram of the OptiTrade portfolio data flow">
+        <div class="visual-topline"><span><span class="status-dot"></span> INSIDE THE SYSTEM</span><span>01 / OPTITRADE</span></div>
+        <div class="diagram-heading">Follow the portfolio data.<br><em>Explore each component.</em></div>
+        <div class="flow-diagram">
+          <div class="broker-row"><button class="flow-node broker-node" data-node="brokers"><span class="node-icon">↔</span><span>IBKR / Futu<small>BROKER ADAPTERS</small></span><span class="node-plus">+</span></button><button class="flow-node paper-node" data-node="paper"><span class="node-icon">▤</span><span>Paper portfolio<small>LOCAL PERSISTENCE</small></span><span class="node-plus">+</span></button></div>
+          <div class="connector connector-top"><span></span></div>
+          <button class="flow-node api-node" data-node="api"><span class="node-icon">{ }</span><span>Portfolio API<small>PYTHON / FASTAPI</small></span><span class="node-plus">+</span></button>
+          <div class="connector connector-bottom"><span></span></div>
+          <button class="flow-node output-node" data-node="interface"><span class="node-icon">▥</span><span>Holdings · P/L · Insights<small>NEXT.JS INTERFACE</small></span><span class="node-plus">+</span></button>
+        </div>
+        <div class="diagram-detail" id="diagram-detail" aria-live="polite"><span class="detail-marker">↳</span><p>Select a component to see how it works.</p></div>
+        <div class="visual-footer"><span>CONCEPTUAL ARCHITECTURE</span><span>BUILT TO BE INSPECTED <span class="tiny-cross">✳</span></span></div>
+      </div>
+    </section>
+
+    <div class="capability-strip" aria-label="Areas of interest"><span>PYTHON & C++</span><span class="strip-star" aria-hidden="true">✳</span><span>TRADING SYSTEMS</span><span class="strip-star" aria-hidden="true">✳</span><span>BROKER INTEGRATIONS</span><span class="strip-star" aria-hidden="true">✳</span><span>APPLIED MACHINE LEARNING</span></div>
+
+    <section class="work-section section-shell" id="work" aria-labelledby="work-title">
+      <div class="section-label"><span>01 / SELECTED WORK</span><span>IDEAS, IMPLEMENTED.</span></div>
+      <div class="section-heading-row"><h2 id="work-title">From logic to <span class="serif-word">working code.</span></h2><p>A few things I’ve built, from portfolio<br>infrastructure to models on a phone.</p></div>
+      <div class="filters" role="group" aria-label="Filter projects"><button class="filter active" data-filter="all" aria-pressed="true">All work <span>03</span></button><button class="filter" data-filter="trading" aria-pressed="false">Trading systems <span>02</span></button><button class="filter" data-filter="ml" aria-pressed="false">Machine learning <span>01</span></button></div>
+      <div class="project-grid">
+        <article class="project-card featured-project" data-category="trading">
+          <button class="project-art optitrade-art" data-project="optitrade" aria-label="Read OptiTrade case study">
+            <div class="art-caption"><span>PORTFOLIO INFRASTRUCTURE</span><span>2026</span></div>
+            <div class="portfolio-schematic" aria-hidden="true"><div class="schematic-sidebar"><span class="mini-mark">o.</span><span class="mini-nav selected"></span><span class="mini-nav"></span><span class="mini-nav"></span></div><div class="schematic-main"><div class="schematic-bar"><span>Portfolio overview</span><span class="demo-badge">PAPER</span></div><div class="portfolio-label">HOLDINGS / ALLOCATION / P&L</div><div class="schematic-bottom"><div class="donut"><span>Portfolio<br><b>snapshot</b></span></div><div class="holding-lines"><span><i></i> Positions <b>↗</b></span><span><i></i> Concentration <b>↗</b></span><span><i></i> Risk insights <b>↗</b></span></div></div><div class="schematic-code"><span>GET</span> /api/portfolio <span class="code-valid">→ validated response</span></div></div></div>
+            <span class="illustration-note">INTERFACE SCHEMATIC</span><span class="art-open" aria-hidden="true">↗</span>
+          </button>
+          <div class="project-copy"><div class="project-meta"><span>01 / TRADING SYSTEMS</span><span>MSc CAPSTONE</span></div><h3><button data-project="optitrade">OptiTrade <span aria-hidden="true">↗</span></button></h3><p>Portfolio APIs, broker adapters, and persistent paper trading. My contribution as Portfolio Lead in a five-person team.</p><div class="tags"><span>Python</span><span>FastAPI</span><span>SQLite</span><span>Next.js</span></div></div>
+        </article>
+
+        <article class="project-card" data-category="trading">
+          <button class="project-art strategy-art" data-project="momentum" aria-label="Read momentum trading strategy case study"><div class="art-caption"><span>SYSTEMATIC STRATEGY</span><span>2025</span></div><div class="strategy-graphic" aria-hidden="true"><span class="strategy-formula">signal <i>×</i> discipline</span><div class="indicator-row"><span>EMA<br><b>10 / 50 / 150</b></span><span>ADX<br><b>&gt; 30</b></span><span>SIZING<br><b>1.5 × ATR</b></span></div><div class="strategy-rule"><span>MARKET DATA</span><i>→</i><span>TREND FILTER</span><i>→</i><span>POSITION SIZE</span></div></div><span class="illustration-note">STRATEGY LOGIC / DAILY VOO DATA</span><span class="art-open" aria-hidden="true">↗</span></button>
+          <div class="project-copy"><div class="project-meta"><span>02 / ALGORITHMIC TRADING</span><span>HKU COMP7415</span></div><h3><button data-project="momentum">Volatility-adjusted momentum <span aria-hidden="true">↗</span></button></h3><p>A Python long/short strategy with trend filters, volatility-based position sizing, and five years of backtest data.</p><div class="tags"><span>Python</span><span>NumPy</span><span>TA-Lib</span><span>Backtesting</span></div></div>
+        </article>
+
+        <article class="project-card" data-category="ml">
+          <button class="project-art detection-art" data-project="detection" aria-label="Read object detection case study"><div class="art-caption"><span>COMPUTER VISION / ON DEVICE</span><span>2024</span></div><div class="detection-scene" aria-hidden="true"><div class="scan-grid"></div><div class="detection-box"><span>OBJECT DETECTION</span><svg viewBox="0 0 100 160" fill="none"><path d="M36 14h28v20l10 20v81q0 12-12 12H38q-12 0-12-12V54l10-20V14Z" fill="#c4cabd" stroke="#636c5c" stroke-width="2"/><path d="M36 14h28v11H36z" fill="#636c5c"/><path d="M27 72h46v42H27z" fill="#f0f0df"/><path d="M35 130h30" stroke="#636c5c" stroke-width="2"/></svg><i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i></div><span class="phone-label">YOLOv8 → ANDROID</span></div><span class="illustration-note">ILLUSTRATIVE DETECTION DIAGRAM</span><span class="art-open" aria-hidden="true">↗</span></button>
+          <div class="project-copy"><div class="project-meta"><span>03 / APPLIED MACHINE LEARNING</span><span>BSc FINAL YEAR PROJECT</span></div><h3><button data-project="detection">Waste object detection <span aria-hidden="true">↗</span></button></h3><p>Taking a YOLOv8 model onto Android, with attention to memory use, batch size, and the realities of mobile inference.</p><div class="tags"><span>YOLOv8</span><span>Kotlin</span><span>Android</span></div></div>
+        </article>
+      </div>
+      <a class="github-footer" href="https://github.com/duenng" target="_blank" rel="noopener noreferrer"><span>More of my code lives on GitHub.</span><span>@duenng <span aria-hidden="true">↗</span></span></a>
+    </section>
+
+    <section class="about-section section-shell" id="about" aria-labelledby="about-title">
+      <div class="section-label"><span>02 / A LITTLE CONTEXT</span><span>THE PERSON BEHIND THE CODE.</span></div>
+      <div class="about-grid"><div class="about-intro"><h2 id="about-title">Curious about markets.<br><span class="serif-word">Grounded in engineering.</span></h2><p>I’m Timothy, a Computer Science graduate based in Hong Kong. I studied Financial Computing at HKU after completing my bachelor’s at CUHK.</p><p>I’m drawn to the point where a quantitative idea becomes a working system: connecting data, implementing the logic, and checking what actually happens.</p><p>Alongside university, I co-founded The Infinity Room and built tools for inventory and POS data. Running a business taught me to care about the people and practical constraints behind the software.</p><a class="text-link" href="assets/Timothy-Ng-Resume.pdf" download>Get the full résumé <span aria-hidden="true">↓</span></a><div class="language-note"><span class="mini-label">HAPPY TO TALK IN</span><span>Cantonese · English · Mandarin</span></div></div>
+      <div class="background"><div class="background-block"><h3 class="mini-label">EDUCATION</h3><div class="timeline-entry"><span class="timeline-date">2024 — 2026</span><h4>The University of Hong Kong</h4><p>MSc Computer Science<br>Financial Computing</p></div><div class="timeline-entry"><span class="timeline-date">2020 — 2024</span><h4>The Chinese University of Hong Kong</h4><p>BSc Computer Science · Intelligence Science<br>Minor in Data Analytics and Informatics</p></div></div><div class="background-block"><h3 class="mini-label">EXPERIENCE</h3><div class="timeline-entry"><span class="timeline-date">JUL 2024 — JUN 2026</span><h4>Co-Founder & Technical Lead</h4><p>The Infinity Room Limited</p></div><div class="timeline-entry"><span class="timeline-date">JUN — AUG 2023</span><h4>Software Developer Intern</h4><p>AI Blocks Education</p></div><div class="timeline-entry"><span class="timeline-date">JUN — AUG 2023</span><h4>Blockchain Developer Intern</h4><p>Meta Dot Limited</p></div></div></div></div>
+      <div class="toolbox"><span class="mini-label">MY TOOLBOX</span><div><span>Python</span><span>C++</span><span>TypeScript</span><span>SQL</span><span>FastAPI</span><span>Next.js</span><span>PostgreSQL</span><span>SQLite</span><span>AWS</span><span>Docker</span></div></div>
+    </section>
+
+    <section class="contact-section section-shell" id="contact" aria-labelledby="contact-title"><div class="section-label"><span>03 / WHAT’S NEXT</span><span class="contact-availability"><span class="status-dot"></span> OPEN TO GRADUATE ROLES</span></div><div class="contact-main"><h2 id="contact-title">Let’s build something<br><span class="serif-word">worth getting right.</span></h2><a class="contact-arrow" href="mailto:ngsuiyat2002@gmail.com" aria-label="Email Timothy Ng">↗</a></div><p>I’m looking for my first quant developer role.<br>If you’re building trading software, I’d like to hear from you.</p><div class="contact-bottom"><div class="email-group"><a href="mailto:ngsuiyat2002@gmail.com">ngsuiyat2002@gmail.com</a><button id="copy-email" aria-label="Copy email address" title="Copy email address"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V4H4v12h4"/></svg></button></div><div class="social-links"><a href="https://github.com/duenng" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/syng723/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div></section>
+  </main>
+  <footer class="site-footer"><a class="wordmark" href="#" aria-label="Back to top">tn<span>↗</span></a><span>© <span id="year">2026</span> Timothy Ng</span><span>HONG KONG <span class="footer-cross" aria-hidden="true">✳</span> ALWAYS LEARNING</span></footer>
+  <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-shell"><div class="dialog-top"><span class="mini-label">PROJECT NOTES</span><button id="close-dialog" aria-label="Close project details">Close <span aria-hidden="true">×</span></button></div><div id="dialog-content"></div><div class="dialog-bottom"><a href="mailto:ngsuiyat2002@gmail.com">Ask me about this project ↗</a></div></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
